@@ -1,0 +1,14 @@
+# MacOS
+.DS_Store
+
+# VS Code
+.history
+
+# AI Context Files
+.claude
+CLAUDE.md
+.gemini
+GEMINI.md
+
+# Archives
+*.zip
