@@ -9,7 +9,7 @@ Chat ViewFlex automatically adjusts the conversation width on Google Gemini, Cha
 ## Features
 
 - **Multi-Platform Support**: Works seamlessly with Google Gemini, ChatGPT, and Claude
-- **Customizable Width**: Adjust conversation width from 40rem to 120rem using an intuitive slider
+- **Customizable Width**: Adjust conversation width from 40rem to 120rem using a slider
 - **Per-Site Settings**: Each platform remembers its own width preference
 - **Preset Options**: Quick-access buttons for Narrow (50rem), Medium (75rem), and Wide (100rem)
 - **Real-Time Updates**: Changes apply instantly without requiring page refresh
@@ -50,7 +50,7 @@ Each platform maintains its own independent width setting, so you can have diffe
 
 ### Architecture
 
-The extension uses a MutationObserver pattern to dynamically detect and modify conversation width elements as they're added to the page. This ensures modifications persist even as the single-page applications navigate and load new content.
+The extension uses a `MutationObserver` pattern to dynamically detect and modify conversation width elements as they're added to the page. This ensures modifications persist even as the single-page applications navigate and load new content.
 
 ### Width Units
 
@@ -75,15 +75,8 @@ chat-viewflex/
 ├── popup.js              # Settings logic
 ├── popup.css             # Settings styling
 ├── icons/                # Extension icons
+├── images/               # Original image files of the extension icons
 └── CLAUDE.md             # Developer documentation
-```
-
-### Building for Production
-
-Create a distribution package:
-
-```bash
-zip -r chat-viewflex.zip manifest.json chat-viewflex.js popup.html popup.js popup.css icons/chat-viewflex-48.png icons/chat-viewflex-96.png -x "*.DS_Store" -x "__MACOSX/*"
 ```
 
 ### Testing
@@ -112,12 +105,16 @@ Contributions are welcome! If you encounter issues or have suggestions:
 
 ## License
 
-[Add your chosen license here - e.g., MIT, GPL, Apache 2.0]
+This project is licensed under the **MIT License** - see the [LICENSE](LICENSE.txt) file for details.
 
 ## Changelog
 
-### Version 1.0
-- Initial release
+### Version 0.5
+- Medium preset to `80rem` from `75rem`
+- Slider steps changed to `1` from `5`
+
+### Version 0.4
+- Perpetually in alpha; more for my own use than for release.
 - Support for Google Gemini, ChatGPT, and Claude
 - Per-site width settings
 - Real-time width adjustment
@@ -125,7 +122,7 @@ Contributions are welcome! If you encounter issues or have suggestions:
 
 ## Support
 
-For issues, questions, or feedback, please visit the [GitHub Issues page](https://github.com/yourusername/chat-viewflex/issues).
+For issues, questions, or feedback, please visit the [GitHub Issues page](https://github.com/mk-imagine/chat-viewflex/issues).
 
 ## Acknowledgments
 

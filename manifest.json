@@ -1,14 +1,16 @@
 {
     "manifest_version": 2,
     "name": "Chat ViewFlex",
-    "version": "0.4",
+    "version": "0.5",
 
     "description": "Flexible conversation width control for Google Gemini, ChatGPT, and Claude",
 
     "browser_specific_settings": {
       "gecko": {
         "id": "{73b85aa0-1443-4d2e-84f0-bd54a3e41aa0}",
-        "data_collection_permissions": false
+        "data_collection_permissions": {
+          "required": ["none"]
+        }
       }
     },
 
