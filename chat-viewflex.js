@@ -231,15 +231,15 @@ function reapplyAllWidths() {
 	});
 }
 
-// Function to update the log (no longer disconnects based on 'found' flags)
+// Function to update the log
 function updateLog() {
 	const logElement = document.getElementById("log");
 	if (logElement) {
 		const observerStatus = observer ? "active" : "disconnected";
 		logElement.textContent = `Observer status: ${observerStatus}. Total modifications: ${totalModifications}. Monitoring...`;
 	}
-	// If you ever need to disconnect the observer based on some other condition,
-	// you could add that logic here or elsewhere. For now, it runs indefinitely.
+	// If the observer needs to be disconnected based on some other condition,
+	// logic can be added here.  Currently, it runs indefinitely.
 }
 
 // Function to scan the DOM for initially loaded target elements
@@ -273,6 +273,7 @@ function initialScanAndModify() {
 		if (target.tagName) {
 			selector += target.tagName;
 		}
+        
 		if (target.classes && target.classes.length > 0) {
 			selector += target.classes.map((cls) => `.${cls}`).join("");
 		} else if (
